@@ -17,7 +17,7 @@ def triangle(a, b, c)
   # WRITE THIS CODE
   if a <= 0 || b <= 0 || c <=0
     raise TriangleError, "at least one side <= 0" 
-  elsif [a, b, c].sort.last <= [a, b, c].sort[0..1].reduce(:+)
+  elsif [a, b, c].sort.last >= [a, b, c].sort[0..1].reduce(:+)
     raise TriangleError, "sum of two sides shoter than the biggest side"
   end
   
